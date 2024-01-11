@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <script>
+      RoomId = "%=roomId%";
+      // console.log("%=roomId%");
+    </script>
+    <script
+      src="https://kit.fontawesome.com/80fc7945d5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/peerjs@1.5.1/dist/peerjs.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main_left">
+        <div class="main_video">
+          <div id="videosection"></div>
+        </div>
+        <div class="main_controllers">
+          <div class="main_controller_block">
+            <div
+              onclick="muteunmute()"
+              class="white main_cotrols_button main_audio_button"
+            >
+              <i class="fa-solid fa-microphone"></i><br />
+              <span>mute</span>
+            </div>
+            <div
+              onclick="playstop()"
+              class="white main_cotrols_button main_video_button"
+            >
+              <i class="fa-solid fa-video"></i><br />
+              <span>stop video</span>
+            </div>
+          </div>
+          <div class="main_controller_block">
+            <div class="white main_cotrols_button mar">
+              <i class="fa-solid fa-shield-halved"></i><br />
+              <span>security</span>
+            </div>
+            <div class="white main_cotrols_button mar">
+              <i class="fa-solid fa-people-group"></i><br />
+              <span>participants</span>
+            </div>
+            <div class="white main_cotrols_button mar">
+              <i class="fa-solid fa-message"></i><br />
+              <span>chat</span>
+            </div>
+          </div>
+          <div class="main_controller_block">
+            <div class="main_end">Leave Meeting</div>
+          </div>
+        </div>
+      </div>
+      <div class="main_right white">
+        <div class="main_header">chat</div>
+        <div class="main_chat_window">
+          <ul class="messages"></ul>
+        </div>
+        <div class="main_message">
+          <input type="text" placeholder="type message here" />
+        </div>
+      </div>
+    </div>
+    <!-- <div id="videosection"></div> -->
+  </body>
+</html>
