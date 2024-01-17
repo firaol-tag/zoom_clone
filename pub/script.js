@@ -2,7 +2,7 @@ const socket = io("/");
 const myPeer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
-  port: "9000",
+  port: "443",
 });
 const peers = {};
 const videoGrid = document.getElementById("videosection");
